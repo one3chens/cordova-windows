@@ -21,7 +21,9 @@
     "test-unit": "jasmine --captureExceptions ",
     "test-e2e": "jasmine --captureExceptions spec/e2e/endtoend.spec.js",
     "cover": "istanbul cover --root bin/templates/cordova --print detail jasmine",
-    "eslint": "eslint bin && eslint template && eslint spec"
+    "eslint": "eslint bin && eslint template && eslint spec",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "dependencies": {
     "cordova-common": "^2.0.0",
@@ -31,7 +33,8 @@
     "q": "^1.4.1",
     "semver": "^5.3.0",
     "shelljs": "^0.5.3",
-    "winjs": "^4.4.0"
+    "winjs": "^4.4.0",
+    "snyk": "^1.41.1"
   },
   "devDependencies": {
     "eslint": "^4.2.0",
@@ -56,5 +59,6 @@
     "winjs"
   ],
   "author": "Apache Software Foundation",
-  "license": "Apache-2.0"
+  "license": "Apache-2.0",
+  "snyk": true
 }
